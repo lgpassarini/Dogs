@@ -6,7 +6,7 @@ import useForm from '../../Hooks/useForm';
 import { UserContext } from '../../Contexts/UserContext';
 
 const LoginForm = () => {
-  const { userLogin } = React.useContext(UserContext);
+  const { userLogin, error, loading } = React.useContext(UserContext);
   const username = useForm(null, true);
   const password = useForm('password', true);
 
@@ -25,8 +25,13 @@ const LoginForm = () => {
       <form action="" onSubmit={handleSubmit}>
         <Input label="Usuário" name="username" type="text" {...username} />
         <Input label="Senha" name="password" type="password" {...password} />
-        <Button>Entrar</Button>
+        {loading ? (
+          <Button disabled>Carregando</Button>
+        ) : (
+          <Button>Entrar</Button>
+        )}
       </form>
+      {error && <p>{error}</p>}
       <Link to="/login/criar">Cadastrar</Link>
     </section>
   );
