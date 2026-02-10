@@ -11,6 +11,14 @@ export const UserStorage = ({ children }) => {
   const [error, setError] = React.useState(null);
   const navigate = useNavigate();
 
+  const logout = React.useCallback(function logout() {
+    setError(null);
+    setLoading(false);
+    setData(null);
+    setLoggedIn(false);
+    window.localStorage.removeItem('token');
+  }, []);
+
   async function getUser(token) {
     const { url, options } = USER_GET(token);
     const response = await fetch(url, options);
@@ -38,18 +46,6 @@ export const UserStorage = ({ children }) => {
     }
   }
 
-  const logout = React.useCallback(
-    function logout() {
-      setError(null);
-      setLoading(false);
-      setData(null);
-      setLoggedIn(false);
-      window.localStorage.removeItem('token');
-      navigate('/login');
-    },
-    [navigate],
-  );
-
   React.useEffect(() => {
     const localToken = window.localStorage.getItem('token');
 
@@ -64,7 +60,6 @@ export const UserStorage = ({ children }) => {
         const response = await fetch(url, options);
         if (!response.ok) throw new Error('Invalid Token');
         await getUser(localToken);
-        navigate('/conta');
       } catch (e) {
         logout();
       } finally {

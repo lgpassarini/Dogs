@@ -15,10 +15,6 @@ const Header = () => {
         {loggedIn && data ? (
           <div className={styles.login}>
             <Link to="/conta">{data.nome}</Link>
-            &nbsp;
-            <button type="button" onClick={logout}>
-              Sair
-            </button>
           </div>
         ) : (
           <Link className={styles.login} to="/login">
