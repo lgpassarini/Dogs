@@ -1,3 +1,4 @@
+import { number } from 'prop-types';
 import React from 'react';
 
 const types = {
@@ -8,6 +9,10 @@ const types = {
   },
   password: {
     message: 'A senha deve ter no mínimo 3 caracteres',
+  },
+  number: {
+    regex: /^\d+$/,
+    message: 'Utilize apenas números',
   },
 };
 
@@ -34,6 +39,11 @@ const useForm = (type, required = false) => {
           return false;
         }
         break;
+      case 'number':
+        if (!types[type].regex.test(value)) {
+          setError(types[type].message);
+          return false;
+        }
     }
 
     setError(null);
