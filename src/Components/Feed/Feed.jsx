@@ -1,7 +1,11 @@
 import React from 'react';
-
+import FeedPhotos from './FeedPhotos';
 const Feed = () => {
-  return <div>Feed</div>;
+  return (
+    <section>
+      <FeedPhotos />
+    </section>
+  );
 };
 
 export default Feed;
