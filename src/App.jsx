@@ -8,6 +8,7 @@ import Footer from './Components/Footer';
 import { UserStorage } from './Contexts/UserContext';
 import ProtectedRoute from './Components/Helper/ProtectedRoute';
 import User from './Components/User/User';
+import Photo from './Components/Photo/Photo';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="login/*" element={<Login />} />
+          <Route path="foto/:id" element={<Photo />} />
           <Route
             path="conta/*"
             element={
