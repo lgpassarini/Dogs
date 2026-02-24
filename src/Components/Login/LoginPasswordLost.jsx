@@ -4,7 +4,7 @@ import Button from '../Forms/Button';
 import Error from '../Helper/Error';
 import useForm from '../../Hooks/useForm';
 import useFetch from '../../Hooks/useFetch';
-import { PASSWORD_LOST } from '../../api';
+import { PASSWORD_LOST } from '../../API';
 
 const LoginPasswordLost = () => {
   const login = useForm(null, true);
