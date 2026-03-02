@@ -1,16 +1,40 @@
-# React + Vite
+# Dogs 🐕
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto de estudo desenvolvido para explorar e aprimorar conhecimentos em **React** e **Vite**.
 
-Currently, two official plugins are available:
+## 📚 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este é um projeto acadêmico criado com o objetivo de aprender e praticar:
 
-## React Compiler
+- Desenvolvimento de aplicações com **React**
+- Configuração e otimização de builds com **Vite**
+- Implementação de **Hot Module Replacement (HMR)** para melhor experiência de desenvolvimento
+- Boas práticas de qualidade de código com **ESLint**
+- Estruturação de componentes React modernos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎯 Objetivos de Aprendizado
 
-## Expanding the ESLint configuration
+- Compreender o ciclo de vida e render de componentes React
+- Explorar diferentes abordagens para Fast Refresh com Babel e SWC
+- Otimizar performance em desenvolvimento e produção
+- Manter padrões de código consistentes e profissionais
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Stack Utilizado
+
+- **React** - Biblioteca para construção de interfaces
+- **Vite** - Build tool moderno e ultra-rápido
+- **ESLint** - Ferramenta para análise e padronização de código
+
+## 📖 Recursos Consultados
+
+- [Documentação do React](https://react.dev)
+- [Documentação do Vite](https://vitejs.dev)
+- [Guia de TypeScript com ESLint](https://typescript-eslint.io)
+
+## 💡 Aprendizados Principais
+
+Este projeto serviu como base para compreender melhor o ecossistema moderno de desenvolvimento Web com React e ferramentas de build contemporâneas.
+
+---
+
+**Status:** Projeto de estudo concluído ✅
